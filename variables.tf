@@ -7,3 +7,12 @@ variable "external_domain_name" {
   description = "External DNS Domain Name"
   default     = "terraform.lark-it.com"
 }
+
+variable "internal_domain_name" {
+  description = "Internal DNS Domain Name"
+  default = "terraform.lan"
+}
+
+variable "vpc_id" {
+  description = "The AWS region."
+}
