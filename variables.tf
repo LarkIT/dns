@@ -20,3 +20,8 @@ variable "vpc_id" {
 variable "cidr" {
   description = "The AWS region."
 }
+
+variable "domain_name_servers" {
+  description = "The AWS region."
+  default     = "${cidrhost("${var.cidr}", 2)}"
+}
