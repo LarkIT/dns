@@ -18,7 +18,7 @@ resource "aws_route53_zone" "internal" {
 
 resource "aws_vpc_dhcp_options" "internal" {
   domain_name = "${var.internal_domain_name}"
-  domain_name_servers = [ "${cidrhost("${var.vpc_cidr}", 2)}" ]
+  domain_name_servers = [ "${cidrhost("${var.cidr}", 2)}" ]
 
   tags = {
     Name = "internal"
