@@ -25,7 +25,7 @@ resource "aws_vpc_dhcp_options" "internal" {
   }
 }
 
-#resource "aws_vpc_dhcp_options_association" "internal" {
-#  vpc_id          = "${aws_vpc.production.id}"
-#  dhcp_options_id = "${aws_vpc_dhcp_options.internal.id}"
-#}
+resource "aws_vpc_dhcp_options_association" "internal" {
+  vpc_id          = "${var.vpc_id}"
+  dhcp_options_id = "${aws_vpc_dhcp_options.internal.id}"
+}
