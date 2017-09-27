@@ -3,6 +3,10 @@ output "external_dns_enable" {
   value = "${var.external_dns_enable}"
 }
 
+output "internal_domain_name" {
+  vaule = "${var.internal_domain_name}"
+}
+
 output "route53_internal_id" {
   value = "${aws_route53_zone.internal.id}"
 }
