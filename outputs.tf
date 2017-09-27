@@ -4,7 +4,7 @@ output "external_dns_enable" {
 }
 
 output "internal_domain_name" {
-  vaule = "${var.internal_domain_name}"
+  value = "${var.internal_domain_name}"
 }
 
 output "route53_internal_id" {
