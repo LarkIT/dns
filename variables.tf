@@ -14,13 +14,13 @@ variable "internal_domain_name" {
 }
 
 variable "vpc_id" {
-  description = "The AWS region."
+  description = "The AWS unique identifier for the vpc."
 }
 
 variable "cidr" {
-  description = "The AWS region."
+  description = "Range of IPv4 addresses for the VPC in the form of a Classless Inter-Domain Routing (CIDR) block."
 }
 
 variable "domain_name_servers" {
-  description = "The AWS region."
+  description = "The domain name servers."
 }
