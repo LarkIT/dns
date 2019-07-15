@@ -13,7 +13,9 @@ resource "aws_route53_zone" "external" {
 resource "aws_route53_zone" "internal" {
   name   = "${var.internal_domain_name}"
   comment = "Internal Domain"
-  vpc_id = "${var.vpc_id}"
+  vpc {
+    vpc_id = "${var.vpc_id}"
+  }
 }
 
 resource "aws_vpc_dhcp_options" "internal" {
